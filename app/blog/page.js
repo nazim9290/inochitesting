@@ -8,7 +8,7 @@ function blog() {
     const [ispost, setpost] = useState([]);
   useEffect(() => {
     axios 
-      .get("http://localhost:5000/blog")
+      .get("https://inochiglobal.onrender.com/blog")
       .then(function (response) {
         // handle success
         setpost(response.data);

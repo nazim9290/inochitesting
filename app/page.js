@@ -62,7 +62,7 @@ export default function Home() {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post('http://localhost:5000/blog', { content });
+    const res = await axios.post('https://inochiglobal.onrender.com/blog', { content });
     setMessage(res?.data?.message);
   } catch (err) {
     setMessage(err?.response?.data?.message);

@@ -60,7 +60,7 @@ export default function BlogEdit({params}) {
 
   useEffect(() => {
     axios 
-      .get(`http://localhost:5000/blog/${params.blogID}`)
+      .get(`https://inochiglobal.onrender.com/blog/${params.blogID}`)
       .then(function (response) {
         setContent(response.data.content)
          console.log(response.data.content);
@@ -78,7 +78,7 @@ export default function BlogEdit({params}) {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.put(`http://localhost:5000/blog/${params.blogID}`, { content });
+    const res = await axios.put(`https://inochiglobal.onrender.com/blog/${params.blogID}`, { content });
     setMessage(res?.data?.message);
   } catch (err) {
     setMessage(err?.response?.data?.message);

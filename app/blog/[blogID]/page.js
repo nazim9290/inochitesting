@@ -8,7 +8,7 @@ function BlogDetails({params}) {
 
   useEffect(() => {
     axios 
-      .get(`http://localhost:5000/blog/${params.blogID}`)
+      .get(`https://inochiglobal.onrender.com/blog/${params.blogID}`)
       .then(function (response) {
         setPost(response.data)
          console.log(response.data);
